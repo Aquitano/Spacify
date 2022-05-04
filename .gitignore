@@ -1,0 +1,47 @@
+### Node ###
+# Build
+website/client/public
+node_modules
+website/client/node_modules
+website/server/node_modules
+website/client/node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# TypeScript cache
+**.tsbuildinfo
+
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+
+### VisualStudioCode ###
+.vscode/*
+
+# Local History for Visual Studio Code
+.history/
+
+# Ignore code-workspaces
+*.code-workspace
+
+# Support for Project snippet scope
+.vscode/*.code-snippets
+
+### Miscellaneous ###
+.DS_Store
+.idea*
+*.sublime-workspace

@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.test{
+    & .hey{
+        text-align: center;
+        text-shadow: brown 5px;
+    }
+}

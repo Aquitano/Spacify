@@ -1,0 +1,40 @@
+{
+  "name": "spacify-client",
+  "description": "",
+  "version": "1.0.0",
+  "author": "Thomas 'Aquitano' Breindl (https://github.com/Aquitano)",
+  "license": "GPL-3.0",
+  "main": "index.js",
+  "scripts": {
+    "copy:html": "copyfiles -u 1 ./src/**/*.html public",
+    "copy:css": "copyfiles -u 1 ./src/css/**.css public",
+    "copy:js": "copyfiles -u 1 ./src/**/*.js public/js",
+    "copy:assets": "copyfiles -u 1 ./src/assets/**/* public/assets",
+    "copy": "npm-run-all --parallel copy:*",
+    "watch:html": "onchange \"src/**/*.html\" -i -- npm-run-all copy:html copy:css build:css reload",
+    "watch:assets": "onchange \"src/assets/**/*\" -- npm run copy:assets reload",
+    "watch:css": "onchange \"src/css/*.css\" -- npm-run-all copy:css build:css reload",
+    "watch:ts": "tsc",
+    "watch": "npm-run-all --parallel watch:*",
+    "serve": "browser-sync start --server public",
+    "start": "npm-run-all copy --parallel watch serve",
+    "build": "npm-run-all copy:*",
+    "postbuild": "postcss public/**/*.css -r --no-map && uglifyjs-folder public/js -eo public/js --pattern \"**/*.js,!**/*min.js\"",
+    "build:css": "postcss public/**/*.css -r --no-map",
+    "reload": "npx browser-sync reload"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.5",
+    "browser-sync": "^2.27.9",
+    "copyfiles": "^2.4.1",
+    "cssnano": "^5.1.7",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.50.1",
+    "tailwindcss": "^3.0.24",
+    "typescript": "^4.6.3",
+    "uglifyjs-folder": "^3.1.2"
+  }
+}
