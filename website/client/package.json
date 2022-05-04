@@ -19,7 +19,7 @@
     "serve": "browser-sync start --server public",
     "start": "npm-run-all copy --parallel watch serve",
     "build": "npm-run-all copy:*",
-    "postbuild": "postcss public/**/*.css -r --no-map && uglifyjs-folder public/js -eo public/js --pattern \"**/*.js,!**/*min.js\"",
+    "postbuild": "npm-run-all build:* && uglifyjs-folder public/js -eo public/js --pattern \"**/*.js,!**/*min.js\"",
     "build:css": "postcss public/**/*.css -r --no-map",
     "reload": "npx browser-sync reload"
   },
