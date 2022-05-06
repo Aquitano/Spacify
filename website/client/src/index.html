@@ -5,26 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spacify</title>
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="w-full min-h-screen font-sans text-gray-500">
+    <header class="w-full min-h-screen font-sans text-gray-700">
       <div class="px-6 max-w-6xl mx-auto">
         <div class="flex justify-between items-center py-10">
-          <div id="logo"></div>
-          <nav class="flex items-center space-x-10 underline-offset-2">
+          <div id="logo">
+            <a href="#" class="font-extrabold text-lg sm:text-2xl">Spacify</a>
+          </div>
+          <nav
+            class="flex items-center space-x-3 sm:space-x-10 underline-offset-2 font-bold"
+          >
             <a
               href="#"
-              class="font-medium text-gray-700 hover:underline hover:text-gray-800"
+              class="text-gray-700 duration-500 hover:underline hover:text-gray-900 invisible sm:visible"
               >Home</a
             >
-            <a href="#" class="hover:text-gray-800 hover:underline">About us</a>
-            <a href="#" class="hover:text-gray-800 hover:underline">Blog</a>
-            <a
-              href="#"
-              class="text-fuchsia-600 font-bold hover:text-fuchsia-800"
-              >Login</a
+            <a href="#" class="hover:text-gray-900 duration-500 hover:underline"
+              >About us</a
             >
+            <a href="#" class="hover:text-gray-900 duration-500 hover:underline"
+              >Blog</a
+            >
+            <button
+              class="bg-indigo-600 text-white px-6 py-2 duration-500 hover:bg-indigo-800 rounded-2xl font-bold"
+            >
+              Login
+            </button>
           </nav>
         </div>
       </div>
