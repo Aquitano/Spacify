@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Thomas 'Aquitano' Breindl (https://github.com/Aquitano)",
   "license": "GPL-3.0",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "copy:html": "copyfiles -u 1 ./src/**/*.html public",
     "copy:css": "copyfiles -u 1 ./src/css/**.css public",
