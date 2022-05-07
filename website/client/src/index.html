@@ -8,14 +8,16 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="w-full min-h-screen font-sans text-gray-700">
-      <div class="px-6 max-w-6xl mx-auto">
+    <div class="w-full min-h-screen font-sans text-gray-600 underline-offset-2">
+      
+      <!-- Header -->
+      <header class="px-6 max-w-6xl mx-auto">
         <div class="flex justify-between items-center py-10">
           <div id="logo">
             <a href="#" class="font-extrabold text-lg sm:text-2xl">Spacify</a>
           </div>
           <nav
-            class="flex items-center space-x-3 sm:space-x-10 underline-offset-2 font-bold"
+            class="flex items-center space-x-3 sm:space-x-10 font-bold"
           >
             <a
               href="#"
@@ -35,7 +37,25 @@
             </button>
           </nav>
         </div>
-      </div>
-    </header>
+      </header>
+
+      <!-- Main content -->
+      <main class="px-6 mx-auto max-w-6xl">
+        <div class="flex">
+          <div class="pt-24 pr-8 pb-24 w-1/2">
+            <h1 class="text-6xl font-bold">The way for productivity & motivation</h1>
+            <p class="pt-8 text-left leading-relaxed text-gray-500 max-w-md">Lorem ipsum dolor sit amet, consectetur adip</p>
+            <div class="flex items-center pt-12 space-x-6">
+              <button class="flex justify-center items-center py-4 px-8 font-bold tracking-wide leading-7 text-white bg-indigo-600 rounded-xl hover:shadow-xl hover:bg-indigo-700 duration-500">Get Started</button>
+              <button class="pl-4 font-bold tracking-wide duration-500 hover:underline">Learn More</button>
+            </div>
+          </div>
+
+          <div class="flex w-1/2">
+            <img src="assets/illustrations/powerful.svg" alt="">
+          </div>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
