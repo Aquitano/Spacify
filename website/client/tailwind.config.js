@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans : ['DM Sans', 'sans-serif'],
+        syncopate: ['Syncopate', 'sans-serif']
       },
     },
   },
