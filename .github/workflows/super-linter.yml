@@ -1,0 +1,28 @@
+name: Lint Code Base
+
+on:
+  push:
+  pull_request:
+    
+jobs:
+  run-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+        
+      - name: Build project
+        uses: actions/setup-node@v3
+        
+      - run: npm ci
+      - run: npm run build
+
+      - name: Lint Code Base
+        uses: github/super-linter/slim@v4
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: main
+          FILTER_REGEX_INCLUDE: .*public/.*
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
