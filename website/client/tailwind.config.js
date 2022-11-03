@@ -1,7 +1,12 @@
 module.exports = {
   content: ["./src/**/*.{html,ts}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans : ['DM Sans', 'sans-serif'],
+        syncopate: ['Syncopate', 'sans-serif']
+      },
+    },
   },
   plugins: [],
 }
