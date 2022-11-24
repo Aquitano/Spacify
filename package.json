@@ -1,16 +1,13 @@
 {
-  "name": "spacify",
-  "description": "",
-  "version": "1.0.0",
-  "author": "Thomas 'Aquitano' Breindl (https://github.com/Aquitano)",
-  "license": "GPL-3.0",
-  "main": "./website/server/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd website/client && npm start",
-    "build": "cd website/client && npm run build"
-  },
-  "workspaces": [
-    "website/client"
-  ]
+    "name": "spacify",
+    "description": "",
+    "version": "1.0.0",
+    "author": "Thomas 'Aquitano' Breindl (https://github.com/Aquitano)",
+    "license": "GPL-3.0",
+    "main": "./website/server/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "cd website/client && npm start",
+        "build": "cd website/client && npm run build"
+    }
 }
